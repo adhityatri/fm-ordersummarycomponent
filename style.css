@@ -1,0 +1,153 @@
+:root {
+    /* primary */
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+    /* neutral */
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+}
+
+html,
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Paleblue);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-size: auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.card {
+    width: 350px;
+    height: 550px;
+    border-radius: 1em;
+    background-color: var(--Verypaleblue);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 2px 20px 15px 5px hsl(223, 37%, 85%, .7);
+}
+
+.card-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-hero > img {
+    width: 100%;
+}
+
+.card-body {
+    padding: 1.5em;
+    flex: 1;
+}
+
+.card-foot {
+    padding: 0.5em 1.5em 1em 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-weight: 900;
+    color: var(--Darkblue);
+}
+
+p {
+    font-weight: 500;
+    color: var(--Darkblue);
+}
+
+.btn {
+    width: 100%;
+    border: 0;
+    height: 45px;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--Brightblue);
+    color: white;
+    box-shadow: 5px 15px 10px 0 hsla(245, 75%, 52%, 0.15);
+}
+
+.btn-primary:hover {
+    background-color: hsl(245, 75%, 52%, .7);
+}
+
+.btn-off {
+    background-color: unset;
+    font-weight: 700;
+    color: hsl(223, 47%, 23%, .6)
+}
+
+.btn-off:hover{
+    color: hsl(223, 47%, 23%);
+}
+
+.btn-link {
+    border: unset;
+    cursor: pointer;
+    background-color: unset;
+    font-weight: 700;
+    text-decoration: underline;
+    color: var(--Brightblue);
+}
+
+.btn-link:hover{
+    text-decoration: unset;
+    color: hsl(245, 75%, 52%, 0.7);
+}
+
+.planlist {
+    height: 60px;
+    display: flex;
+    border-radius: 1em;
+    padding: 6px 12px;
+    align-items: center;
+    background-color: hsl(225, 100%, 96%);
+    justify-content: space-between;
+    text-align: left;
+    gap: 12px;
+}
+
+.label-bold {
+    font-weight: 900;
+    color: var(--Darkblue);
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 1440px) {
+    html,
+    body {
+        background-image: url(images/pattern-background-desktop.svg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .card {
+        width: 350px;
+    }
+}
